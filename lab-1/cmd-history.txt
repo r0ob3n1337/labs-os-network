@@ -1,0 +1,40 @@
+----- ex-4 -----
+
+copy con my.txt & sort my.txt
+
+Абашев Артем Владимирович
+Омар Эвелина Константиновна
+Майорова Наталья Дмитриевна
+Пикуль Татьяна Вячеславовна
+Ражабов Мухаммадали Шохизинда угли
+Трухина Полина Александровна
+Скворцова Ксения Алексеевна
+Пустовит Александра Олеговна
+Анухин Егор Андреевич
+Ширяев-Горский Никита Станиславович
+Шумилова УЛьяна Андреевна
+Аполонский Максим Леонидович
+
+sort my.txt > sorted-my.txt
+
+
+----- ex-5 -----
+
+dir /? > help.txt
+type help.txt
+copy /? >> help.txt
+xcopy /? >> help.txt
+more help.txt
+
+----- ex-6 -----
+
+dir c:\Windows /a-ds /o:s > system-files.txt && type system-files.txt
+
+----- ex-7 -----
+
+xcopy c:\Windows\*.jpeg d:\WinGrafika\
+
+----- ex-8 -----
+
+xcopy c:\Windows\*.exe d:\WinEx\
+
