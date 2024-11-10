@@ -1,0 +1,10 @@
+Занес в переменную окружения результат команды Get-Process
+$processesInfo = Get-Process
+
+
+Выводим в файл результат команды Get-Process:
+$processesInfo | Out-File -FilePath "$HOME\Desktop\task-5-result.txt"
+
+
+Вывожу на экран количество процессов
+$processesInfo.Count

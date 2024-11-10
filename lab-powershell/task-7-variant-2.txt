@@ -1,0 +1,6 @@
+Команда для выполнения:
+Get-Process | Where-Object { $_.Id -gt 40 } | Sort-Object -Property StartTime | Select-Object Id, Name, StartTime, Handles | ConvertTo-Html -Head "<style>table {border-collapse: collapse;} th, td {border: 1px solid black; padding: 5px;}</style>" | Out-File -FilePath "$HOME\Desktop\task-7-result.html"
+
+
+Если не хочется запускать команду для создания на рабочем столе результирующего html-файла, то 
+результирующий HTML-файл task-7-result.html с таблицей лежит рядом с txt файлом команды.

@@ -1,0 +1,14 @@
+Команда: 
+
+$imageExtensions = @('bmp', 'jpg', 'jpeg')
+$imageFiles = Get-ChildItem -Path C:\Windows -Recurse -Include *.bmp,*.jpg,*.jpeg
+$totalSize = 0
+foreach ($file in $imageFiles) {
+    $totalSize += $file.Length
+}
+"{0:N2} мегабайт" -f ($totalSize / 1MB)
+
+
+Вывод:
+
+140,35 мегабайт

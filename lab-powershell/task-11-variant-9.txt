@@ -1,0 +1,25 @@
+Команда:
+
+$dllFiles = Get-ChildItem -Path C:\Windows\System32 -Filter *.dll
+$largestFiles = $dllFiles | Sort-Object -Property Length -Descending | Select-Object -First 3
+$smallestFiles = $dllFiles | Sort-Object -Property Length | Select-Object -First 3
+
+"Min weight files:"
+$smallestFiles
+
+"Max wight files:"
+$largestFiles
+Min weight files:
+
+
+Результат:
+
+Mode                 LastWriteTime         Length Name                                                                           
+----                 -------------         ------ ----                                                                           
+-a----        07.05.2022     13:40           7680 Microsoft.Uev.SyncConditions.dll                                               
+-a----        07.05.2022     13:40           8192 Microsoft.Uev.MonitorSyncProvider.dll                                          
+-a----        07.05.2022     13:40          11264 Microsoft.Uev.SmbSyncProvider.dll                                              
+Max wight files:
+-a----        13.03.2024     19:22       27086848 edgehtml.dll                                                                   
+-a----        07.05.2022     13:40       25260032 Hydrogen.dll                                                                   
+-a----        13.03.2024     19:22       23146496 mshtml.dll 

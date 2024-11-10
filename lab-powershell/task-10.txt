@@ -1,0 +1,23 @@
+Команда:
+
+$dirTimes = @()
+$psTimes = @()
+for ($i = 0; $i -lt 10; $i++) {
+    $dirTimes += (Measure-Command { dir }).TotalMilliseconds
+    $psTimes += (Measure-Command { ps }).TotalMilliseconds
+}
+$maxDirTime = ($dirTimes | Measure-Object -Maximum).Maximum
+$minDirTime = ($dirTimes | Measure-Object -Minimum).Minimum
+$avgDirTime = ($dirTimes | Measure-Object -Average).Average
+$maxPsTime = ($psTimes | Measure-Object -Maximum).Maximum
+$minPsTime = ($psTimes | Measure-Object -Minimum).Minimum
+$avgPsTime = ($psTimes | Measure-Object -Average).Average
+
+"[DIR]: MIN: $maxDirTime ms, MIN: $minDirTime ms, AVG: $avgDirTime ms"
+"[PS]: MIN: $maxPsTime ms, MIN: $minPsTime ms, AVG: $avgPsTime ms"
+
+
+Результат:
+
+[DIR]: MIN: 113.0638 ms, MIN: 101.144 ms, AVG: 105.63675 ms
+[PS]: MIN: 2.6496 ms, MIN: 2.4724 ms, AVG: 2.51378 ms

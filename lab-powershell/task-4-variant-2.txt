@@ -1,0 +1,43 @@
+Команда:
+Get-ChildItem -Path C:\Windows -Recurse -Force | Where-Object { $_.Name -like 'SY*' } | Sort-Object -Property LastWriteTime | Select-Object Name, LastWriteTime
+
+
+Вывод:
+...очень много файлов... Вот несколько из них:
+
+Name                                                                                     LastWriteTime      
+----                                                                                     -------------      
+System.Speech.dll                                                                        04.05.2022 15:40:00
+System.Workflow.Runtime.dll                                                              06.05.2022 11:06:00
+System.Web.Services                                                                      25.10.2024 22:10:24
+System.Management.Automation.ni.dll                                                      25.10.2024 22:10:58
+System.Management.Automation.ni.dll.aux                                                  25.10.2024 22:10:58
+System.Core                                                                              25.10.2024 22:10:59
+System.Manaa57fc8cc#                                                                     25.10.2024 22:10:59
+System                                                                                   25.10.2024 22:10:59
+System.Configuration.ni.dll                                                              25.10.2024 22:11:03
+System.Configuration                                                                     25.10.2024 22:11:03
+System.Configuration.Install.ni.dll                                                      25.10.2024 22:11:03
+System.Configuratio#                                                                     25.10.2024 22:11:03
+System.DirectoryServices.ni.dll                                                          25.10.2024 22:11:03
+System.DirectorySer#                                                                     25.10.2024 22:11:03
+System.Runtime.Remoting.ni.dll                                                           25.10.2024 22:11:03
+System.Runtime.Remo#                                                                     25.10.2024 22:11:03
+System.ServiceProcess.ni.dll                                                             25.10.2024 22:11:03
+System.ServiceProce#                                                                     25.10.2024 22:11:03
+System.Transactions.ni.dll                                                               25.10.2024 22:11:04
+System.Transactions                                                                      25.10.2024 22:11:04
+System.Web.ni.dll                                                                        25.10.2024 22:11:06
+System.Web                                                                               25.10.2024 22:11:06
+System.Web.Services.ni.dll                                                               25.10.2024 22:11:07
+System.Web.Services                                                                      25.10.2024 22:11:07
+System.Core                                                                              25.10.2024 22:11:17
+System                                                                                   25.10.2024 22:11:18
+SYSTEMSETTINGS.EXE-084BB8F9.pf                                                           05.11.2024 3:11:56 
+SYSTEMSETTINGSBROKER.EXE-8BBE2894.pf                                                     06.11.2024 20:38:02
+SysWOW64                                                                                 08.11.2024 17:12:48
+SystemRestore                                                                            09.11.2024 16:27:11
+SYSTEM                                                                                   10.11.2024 4:13:09 
+System.evtx                                                                              10.11.2024 13:29:19
+System32                                                                                 10.11.2024 13:35:14
+SystemTemp                                                                               10.11.2024 15:11:07
